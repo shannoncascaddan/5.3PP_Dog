@@ -1,0 +1,50 @@
+public class DogDriver
+{
+    public static void main(String[] agrs)
+    {
+        Dog dog1 = new Dog("Fang", 5,"Husky",80);
+        Dog dog2 = new Dog("Nutmeg",12,"Australian Sheepdog", 45);
+        Dog dog3 = new Dog("Manti", 13, "Maltese Poodle", 25);
+
+        System.out.println("Name: "+dog1.getName()+"\nBreed: "+dog1.getBreed()+"\nAge: "+dog1.getAge());
+        System.out.println();
+        System.out.println("Name: "+dog2.getName()+"\nWeight(lbs): "+dog2.getWeight());
+        System.out.println();
+        System.out.println(dog3);
+        System.out.println();
+        System.out.println("Number of Dogs: "+Dog.getDogCount());
+        System.out.println();
+
+        //compare Nutmeg and Fang
+        if (dog2.compareTo(dog1) == -1)
+        {
+            System.out.println("Fang is older than Nutmeg.");
+        }//end Nutmeg < Fang if
+        else if (dog2.compareTo(dog1) == 0)
+         {
+            System.out.println("Nutmeg and Fang are the same age.");
+         }//end Nutmeg = Fang if
+           else if (dog2.compareTo(dog1) == 1)
+         {
+             System.out.println("Nutmeg is older than Fang.");
+         }//end Nutmeg < Fang if
+
+         System.out.println();
+
+        //compare Fang and Manti
+        if (dog1.compareTo(dog3) == 1)
+        {
+            System.out.println("Fang is older than Manti.");
+        }//end Nutmeg < Fang if
+        else if (dog1.compareTo(dog3) == 0)
+        {
+            System.out.println("Manti and Fang are the same age.");
+        }//end Nutmeg = Fang if
+        else if (dog1.compareTo(dog3) == -1)
+        {
+            System.out.println("Manti is older than Fang.");
+        }//end Nutmeg < Fang if
+
+
+    }//end main method
+}//end DogDriver class
