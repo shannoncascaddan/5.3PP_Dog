@@ -1,0 +1,103 @@
+public class Dog implements Comparable<Dog>
+{
+    //instance variables
+    private String name, breed;
+    private int age, weight;
+    private static int dogCount;
+
+    //constructors
+    public Dog()
+    {
+        name = null;
+        age = 0;
+        breed = null;
+        weight = 0;
+        dogCount++;
+    }//end default constructor
+
+    public Dog(String name, int age, String breed, int weight)
+    {
+        this.name = name;
+        this.age = age;
+        this.breed = breed;
+        this.weight = weight;
+        dogCount++;
+    }//end 4-arg constructor
+
+    //getters
+    public String getName()
+    {
+        return name;
+    }//end getName
+
+    public int getAge()
+    {
+        return age;
+    }//end getAge
+
+    public String getBreed()
+    {
+        return breed;
+    }//end getBreed
+
+    public int getWeight()
+    {
+        return weight;
+    }//end getWeight
+
+    public static int getDogCount()
+    {
+        return dogCount;
+    }//end getDogCount
+
+    //setters
+    public void setName(String name)
+    {
+        this.name = name;
+    }//end setName
+
+    public void setAge(int age)
+    {
+        this.age = age;
+    }//end setAge
+
+    public void setBreed(String breed)
+    {
+        this.breed = breed;
+    }//end setBreed
+
+    public void setWeight(int weight)
+    {
+        this.weight = weight;
+    }//end setWeight
+
+    //brain methods
+    public double toKg()
+    {
+        return weight*.453592;
+    }//end toKg
+
+    //compareTo
+    public  int compareTo(Dog dog)
+    {
+        if(this.age < dog.age)
+        {
+            return -1;
+        }// end if (<)
+        if(this.age == dog.age)
+        {
+            return 0;
+        }//end == if
+        else
+        {
+            return 1;
+        }//end else (>)
+    }//end compare to
+
+    //toString
+    public String toString()
+    {
+        return "Name: "+ name +"\nAge: "+ age + "\nBreed: "+breed+"\nWeight: "+weight;
+    }//end toString
+
+}//end Dog class
